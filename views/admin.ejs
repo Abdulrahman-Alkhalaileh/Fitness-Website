@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Interface</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" class="logo">
+        
+        <% usersResult.forEach(element => { %>
+            <% if(element.email=='abdulrahman@gmail.com') {%> 
+                <h1><%= element.name %> </h1>
+        <% }}); %> 
+        <a href="../join/login"><button>Logout</button></a>
+    </header>
+    
+    <div class="Container">
+        <h1>Delete Users</h1><br>
+        <table id="users">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>E-MAIL</th>
+                <th>ADDRESS</th>
+                <th>PHONE</th>
+                <th>PASSWORD</th>
+                <th>DELETION</th>
+            </tr>
+            <% for(let i=0; i<usersResult.length;i++){ %> 
+                <% if(usersResult[i].email !=='abdulrahman@gmail.com'){ %> 
+                <tr >
+                    <td><%= usersResult[i].ID %> </td>
+                    <td><%= usersResult[i].name %> </td>
+                    <td><%= usersResult[i].email %> </td>
+                    <td><%= usersResult[i].address %> </td>
+                    <td><%= usersResult[i].phone %> </td>
+                    <td><%= usersResult[i].password %> </td>
+                    <td><a href="delete/<%=usersResult[i].ID%>"><button id="deleteUser">delete</button></a></td>
+                </tr>
+            <% }} %> 
+        </table>
+    </div>
+
+    <div class="Container">
+        <h1 id="productForm">Add a Product</h1><br>
+        <h3>Click (Edit) for a spicefic product load edit form here</h3>
+        <form action="" method="post">
+            <div class="formContainer">
+                <div class="inputField">
+                    <label for="">Product_Name</label><br>
+                    <input type="text" name="product_name" id="nameInput" required><br>
+                    <label for="">Price</label><br>
+                    <input type="number" name="price" step="any" id="priceInput" required><br>
+                </div>
+                
+                <div class="inputField">
+                    <label for="">Description</label><br>
+                    <textarea name="description" id="descriptionInput" cols="40" rows="5" required></textarea><br>
+                </div>
+                <div class="inputField">
+                    <label for="">Quantity</label><br>
+                    <input type="number" name="quantity" id="quantityInput" required><br>
+                    <label for="">Image Name</label><br>
+                    <input type="text" name="image" id="imageInput" required><br>
+                </div>
+            </div>
+            <button id="addProduct" class="addButton">Add Product</button>
+        </form>
+        <h2 id="editedProductLabel" class="hideButton">Product ID:</h2>
+        <h2 id="editedProductID"></h2>
+        <a href="./editProduct/" id="editProductLink"><button id="editSubmit" class="addButton hideButton">Edit Product</button></a>
+
+
+        <h1 id="products">Products</h1><br>
+        <table id="users">
+            <tr>
+                <th>ID</th>
+                <th>DATE</th>
+                <th>PRODUCT_NAME</th>
+                <th>PRICE</th>
+                <th>DESCRIPTION</th>
+                <th>QUANTITY</th>
+                <th>IMAGE</th>
+                <th>EDIT</th>
+                <th>DELETION</th>
+            </tr>
+            <% for(let i=0; i<storeResult.length;i++){ %> 
+                <tr >
+                    <td id="ID"><%= storeResult[i].ID %></td>
+                    <td id=""><%= storeResult[i].date %></td>
+                    <td id="product_name"><%= storeResult[i].product_name %></td>
+                    <td id="price"><%= storeResult[i].price %></td>
+                    <td id="description"><%= storeResult[i].description %></td>
+                    <td id="quantity"><%= storeResult[i].quantity %></td>
+                    <td id="image"><%= storeResult[i].image %></td>
+                    <td><button class="editButton" id="editProduct">Edit</button></td>
+                    <td><a href="deleteProduct/<%= storeResult[i].ID %>#products"><button id="deleteUser">delete</button></a></td>
+                </tr>
+            <% } %> 
+    </div>
+    
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

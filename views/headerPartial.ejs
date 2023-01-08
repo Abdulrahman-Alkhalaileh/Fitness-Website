@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineFitness</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <% if (currentUrl=='/fat') { %>
+        <link rel="stylesheet" href="css/fat.css" />    
+    <% }else if (currentUrl=='/muscles'){ %>
+        <link rel="stylesheet" href="css/muscle.css" />    
+    <% }else if (currentUrl=='/nutrition1' ){ %>
+        <link rel="stylesheet" href="css/fat.css" />
+        <link rel="stylesheet" href="css/nutrition.css" />
+    <%}else if(currentUrl=='/nutrition2') {%>
+        <link rel="stylesheet" href="css/fat.css" />
+        <link rel="stylesheet" href="css/caloriesTable.css" />
+        <% } %> 
+  </head>
+  <body>
+    <!-- header section starts      -->
+    <header class="header" id="header">
+      <div class="header-btn">
+        <a href="/" >
+            <div class="logo"></div>
+        </a>
+
+        <nav class="navbar" id="navbar">
+          <a href="/#home">home</a>
+          <a href="/#about">about</a>
+          <a href="/#workout">workout</a>
+          <a href="/#nutrition">nutrition</a>
+          <a href="/#store">store</a>
+        </nav>
+      </div>
+
+      <div class="header-btn">
+        <!-- google translate -->
+        <!-- <div id="google_translate_element"></div> -->
+        <div id="all-btn" class="fa fa-toggle-off theme"></div>
+        <i id="all-btn" class="fas fa-globe" data-id="language"></i>
+        <!-- <div id="all-btn" class="fa fa-shopping-cart theme"></div> -->
+        <a href="./join/login"><i id="all-btn" class="fas fa-sign-out-alt" data-id="logutBtn"></i></a>
+        <div id="menu-btn" class="fas fa-bars theme" ></div>
+      </div>
+    </header>
+    <!-- header section ends     -->

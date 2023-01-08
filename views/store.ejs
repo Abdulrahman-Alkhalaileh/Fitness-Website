@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineFitness</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/store.css" />
+
+  </head>
+  <body>
+    <!-- header section starts      -->
+    <header class="header" id="header">
+      <div class="header-btn">
+        <a href="/" >
+            <div class="logo"></div>
+        </a>
+
+        <nav class="navbar" id="navbar">
+          <a href="/#home">home</a>
+          <a href="/#about">about</a>
+          <a href="/#workout">workout</a>
+          <a href="/#nutrition">nutrition</a>
+          <a href="/#store">store</a>
+        </nav>
+      </div>
+
+      <div class="header-btn">
+        <!-- google translate -->
+        <!-- <div id="google_translate_element"></div> -->
+        <div id="all-btn" class="fa fa-toggle-off theme"></div>
+        <i id="all-btn" class="fas fa-globe" data-id="language"></i>
+        <a href="../join/login"><i id="all-btn" class="fas fa-sign-out-alt" data-id="logutBtn"></i></a>
+        <div id="all-btn" class="fa fa-shopping-cart theme" data-cart="cart"></div>
+        <div id="menu-btn" class="fas fa-bars theme" ></div>
+      </div>
+      <div class="cart" id="cart">
+        <div class="cartShap">
+            <div id="all-btn" class="fa fa-shopping-cart theme" data-cart="cart"></div>
+            <h3>YOUR ID: <%= userID %></h3>
+        </div>
+        <div class="addedItems">
+            <% let totalPrice=0 %> 
+        <% cartItems.forEach(ele=>{%> 
+        <div class="cart-item">
+            <img src="../images/products/<%=ele.image%>" alt="">
+            <div class="info">
+                <h3><%=ele.product_name%></h3>
+                <div class="more-info">
+                    <span>price: <%=ele.price%> JOD</span>|
+                    <span>Quantity: 1</span>
+                </div>
+                <div class="removeBtn">
+                    <a href="./removeItem/<%=ele.ID%>" class="btn">remove</a>
+                </div>
+            </div>
+        </div>
+        <% totalPrice+=ele.price %> 
+        <%})%>
+        </div>
+        <div class="submit">
+            <hr>
+            <h3>Total: <span><%= Math.trunc(totalPrice* 100) / 100; %>  JOD</span></h3>
+            <a href="" class="btn">checkout</a>
+        </div>
+      </div>
+    </header>
+    
+    <!-- header section ends     -->
+
+
+    <section class="banner">
+      <span>start shopping</span>
+      <h3>here are the products we recommend to buy.</h3>
+      <p>I'ts not essential to buy from here, but it's good to have them.</p>
+    </section>
+    <h1 class="heading"><span>STORE</span></h1>
+
+    <!-- banner section starts  -->
+    <section class="blogs" id="store">
+       
+
+    <!-- banner section ends -->
+
+
+
+    <!-- blogs section starts  -->
+
+    
+
+          <!-- review section starts  -->
+
+    <section class="review">
+        <div class="information">
+          <span>product</span>
+          <h3>Best price promise</h3>
+          <p>
+            check your cart for any old product you may want to buy before continue shopping.
+          </p>
+          <a href="#" class="btn">Show cart</a>
+        </div>
+  
+        <div class="swiper review-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide id">
+              <p>
+                MineFitness is committed to giving you the best prices . all of are products are usefull and essintial.
+              </p>
+              <div class="user">
+                <img src="../images/pic-1.png" alt="" />
+                <div class="info">
+                  <h3>Abdulrahman</h3>
+                  <span>admin</span>
+                </div>
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+  
+            <div class="swiper-slide slide id">
+              <p>
+                Save 50% while supplies last. Save some green for your summer routine! Stack up the savings.
+              </p>
+              <div class="user">
+                <img src="../images/pic-1.png" alt="" />
+                <div class="info">
+                  <h3>Abdulrahman</h3>
+                  <span>fitness expert</span>
+                </div>
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+  
+  
+        </div>
+      </section>
+      <h1 class="heading"><span>PRODUCTS</span></h1>
+  
+      <!-- review section ends -->
+
+      <!-- STORE section STARTS -->
+
+      <div class="box products-container">
+
+            <% products.forEach(ele=>{ %> 
+            <div class=" slide product">
+                <div class="image">
+                  <img src=<%= '../images/products/'+ele.image%> />
+                </div>
+                <div class="content id">
+                  <div class="link">
+                    <a href="#"><% if(ele.quantity==='0'){ %> 
+                        out of stock 
+                        <% }else{ %>
+                            <%= ele.quantity %> in stock 
+                            <% } %>  
+                        <span>|</span>
+                    <a href="#"><%= ele.date %> </a>
+                  </div>
+                  <h3><%= ele.product_name %> </h3>
+                  <h3>
+                    <span style="color: blue"><%= ele.price %> JOD</span>
+                </h3>
+                  <p>
+                    <%= ele.description %>
+                  </p>
+                  <a href='./addItem/<%=ele.product_name%>/<%=ele.price%>/<%=ele.image%>' class="btn">add to cart</a>
+                </div>
+            </div>
+                <% }) %> 
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- STORE section ends -->
+
+    <!-- footer section starts  -->
+
+    <%- include ('footerPartial') %> 
+    <script src="../js/cart.js"></script>
+  </body>
+</html>

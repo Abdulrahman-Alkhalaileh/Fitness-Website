@@ -1,0 +1,145 @@
+<%- include('headerPartial') %> 
+
+    <!-- content section starts     -->
+
+    <div class="container">
+        <h3 class="title">NUTRITION</h3>
+      <div class="intro-part">
+        <h3>
+          first of all, you should know your daily need of calories based on
+          your age,gender,height,weight and your activity state. <br /><br />
+          now,you may ask, what is calories and what's the importance of it?<br />
+          So ...calories are the energy needed to raise the temperature of 1
+          gram of water through 1 °C (now usually defined as 4.1868 joules).<br /><br />
+          now, you may also ask, what in the hell dose that mean, even if the
+          water boild, what does this do to me!!<br />
+          the answer will be after you calculate your daily need of calories
+          bellow<br /><br />
+        </h3>
+        <div class="calculator">
+          <div class="heading"><h3>calories calculator</h3></div>
+          <form action="" onsubmit="return false">
+            <div class="input">
+              <label><h3>Age</h3></label>
+              <input type="number" min="15" max="85" id="age" required />
+              <label>15 - 85</label><br />
+            </div>
+            <div class="input">
+              <label><h3>Gender</h3></label>
+              <input
+                type="radio"
+                id="gender"
+                name="gender"
+                value="male"
+                checked="checked"
+              /><label><h3>male</h3></label>
+              <input
+                type="radio"
+                id="gender"
+                name="gender"
+                value="female"
+              /><label><h3>female</h3></label><br />
+            </div>
+            <div class="input">
+              <label><h3>height</h3></label>
+              <input type="number" min="120" id="height" required /><label
+                >in CM</label
+              ><br />
+            </div>
+            <div class="input">
+              <label><h3>weight</h3></label>
+              <input type="number" min="30" id="weight" required /><label
+                >in KG</label
+              ><br />
+            </div>
+            <div class="input">
+              <label><h3>activity</h3></label>
+              <select id="activity" required>
+                <option value="sedentary">sedentary</option>
+                <option value="light-activity">light activity</option>
+                <option value="active" selected>active</option>
+                <option value="very-active">very active</option>
+              </select>
+              <br />
+            </div>
+            <button class="btn" id="calculate">calculate</button>
+          </form>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content">
+          <h3 class="title">Daily colories needed</h3>
+          <div class="your-calories">
+            <table>
+              <thead>
+                <td>
+                  gain weight<br />
+                  <p>0.25 kg/week</p>
+                </td>
+                <td id="tablefeild">
+                  <br />
+                  <p>calorie/day</p>
+                </td>
+              </thead>
+              <thead>
+                <td>weight stability</td>
+                <td id="tablefeild">
+                  <br />
+                  <p>calorie/day</p>
+                </td>
+              </thead>
+              <thead>
+                <td>
+                  weight loss<br />
+                  <p>0.5 kg/week</p>
+                </td>
+                <td id="tablefeild">
+                  <br />
+                  <p>calorie/day</p>
+                </td>
+              </thead>
+              <thead>
+                <td>
+                  extreme weight loss<br />
+                  <p>1 kg/week</p>
+                </td>
+                <td id="tablefeild">
+                  <br />
+                  <p>calorie/day</p>
+                </td>
+              </thead>
+            </table>
+            <h3>
+              The results show a number of daily calorie estimates that can be
+              used as a guideline for how many calories to consume each day to
+              maintain, lose, or gain weight at a chosen rate.
+            </h3>
+            <br /><br /><br />
+            <h3>
+              You can use this information to help you figure out how many
+              calories you should be consuming to maintain your weight. On
+              active days, you'll need more calories, so it's okay to eat a
+              little more than you would on an average day. But on more
+              sedentary days, you may want to reduce your calorie intake.
+              <br /><br />
+              If you want to lose weight, try to stay below your calorie needs
+              or increase your activity level. However, make sure you are eating
+              nutritious meals and not restricting your calories too much -
+              eating too little or losing weight rapidly can be unhealthy and
+              dangerous.
+            </h3>
+          </div>
+          <img src="/images/nutrition/weigth.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- content section ends  -->
+
+    <!-- footer section starts  -->
+    
+    <%- include ('footerPartial') %> 
+
+    <script type="module" src="js/nutrition1.js"></script>
+  </body>
+</html>

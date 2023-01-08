@@ -1,0 +1,224 @@
+/* ===== Google Font Import - Poformsins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/images/home-bg-2.jpg);
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  overflow: auto;
+  background-attachment: fixed;
+}
+
+/* .container {
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0px 4px 2px rgba(2, 62, 175, 0.5),
+    4px 4px 16px rgba(2, 62, 175, 0.5), 0px 4px 16px rgba(2, 62, 175, 0.5),
+    4px 8px 16px rgba(2, 62, 175, 0.5);
+  overflow: hidden;
+  margin: 0 20px;
+} */
+
+
+
+.form {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.519);
+  width: fit-content;
+  margin-bottom: 100px;
+  border-radius: 10px;
+}
+
+
+.title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+  color: white;
+}
+
+.form .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background-color: #4070f4;
+  border-radius: 25px;
+}
+
+.form .input-field {
+  position: relative;
+  height: 35px;
+  margin-top: 30px;
+  width: 300px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 230px;
+  padding: 0 35px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 3px solid rgb(90, 90, 90);
+  border-top: 2px solid transparent;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  background-color: rgb(216, 216, 216);
+}
+::placeholder {
+  color: black;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+  color: #4070f4;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+.input-field i.showHidePw {
+  right: 0;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #4070f4;
+}
+
+.form .text {
+  color: rgb(219, 219, 219);
+  font-size: 14px;
+}
+
+.form a.text {
+  color: #4070f4;
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 35px;
+}
+
+.button input:hover {
+  background-color: #265df2;
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.83);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 300px;
+    height: 300px;
+    width: 600px;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    z-index:100;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: linear 0.5s popup;
+    box-shadow: rgba(0, 0, 0, 0.468) 0px 10px 10px 10px;
+}
+
+.popup p {
+    color: rgb(180, 180, 180);
+}
+
+@keyframes popup {
+    0% {transform: scale(0);
+        top:0}
+    100% {transform: scale(1);}
+}
+
+button {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 15px;
+    width:200px;
+  }
+
+  .hidePopup {
+    display:none;
+  }
+
+/* @media (max-width: 1585px) {
+  body {
+    height: 130vh;
+  }
+} */

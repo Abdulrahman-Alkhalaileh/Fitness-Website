@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MineFitness Join</title>
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../css/login.css" />
+
+    <!--<title>Login & Registration Form</title>-->
+  </head>
+  <body>
+    <% if(popup==true){ %> 
+    <div class="popup title">
+        <h2>WARNING</h2>
+        <p>Email is already used, try another email.</p>
+        <a href="./register"><button>Try Again</button></a>
+    </div>
+    <% } %> 
+    <div class="logo"
+      ><img src="../images/logo.png" width="150px" alt=""
+    /></div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form action="" method="post">
+            <div class="input-field">
+              <input type="text" name='name' placeholder="Enter your name" required autofocus/>
+              <i class="uil uil-user"></i>
+            </div>
+              <div class="input-field">
+                <input type="email" name='email' placeholder="Enter your email" required />
+                <i class="uil uil-envelope icon"></i>
+              </div>
+              <div class="input-field">
+                <input type="text" name='address' placeholder="Enter your address" required />
+                <i class="uil uil-file-alt nav__icons"></i>
+              </div>
+              <div class="input-field">
+                <input type="number" name='phone' placeholder="Enter your phone number" required />
+                <i class="uil uil-phone icon"></i>
+              </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                name='password'
+                placeholder="Create a password"
+                name='password'
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="sigCheck" />
+                <label for="sigCheck" class="text">Remember me</label>
+              </div>
+
+              <a href="#" class="text">Forgot password?</a>
+            </div>
+
+            <div class="input-field button">
+                <input type="submit" value="Register Now"/>
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Already have an acount?
+              <a href="./login" class="text login-link">Signin now</a>
+            </span>
+          </div>
+        </div>
+        <script src="../js/login.js"></script>
+    </body>
+</html>

@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+.header {
+  position: relative;
+}
+
+.title {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  background: linear-gradient(rgba(97, 97, 97, 0.7), rgba(90, 90, 90, 0.7)),
+    url(../images/banner-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 10vh;
+}
+
+.anatomy-container {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 span {
+  color: rgb(104, 160, 245);
+}
+
+.anatomy {
+  border: 5px rgb(48, 48, 49) solid;
+  /* background-image: url("/images/anatomy.svg"); */
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 750px;
+  color: white;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.6) -5px 10px 10px 5px;
+  /* transform: scale(0.75); */
+}
+
+.front-anatomy {
+  height: 490px;
+  width: 370px;
+  border: 3px white solid;
+  background-image: url("/images/frontAnatomy/anatomy.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+
+.front-anatomy div,
+.back-anatomy div {
+  transform: scale(1.55);
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.traps {
+  top: 72px;
+  left: 153px;
+  z-index: 99;
+  background-image: url("/images/frontAnatomy/traps.svg");
+  height: 17px;
+  width: 60px;
+}
+
+.traps:hover {
+  background-image: url("/images/frontAnatomyRed/traps.svg");
+}
+
+.sholders {
+  top: 81px;
+  left: 134px;
+  z-index: 98;
+  background-image: url("/images/frontAnatomy/sholders.svg");
+  height: 26px;
+  width: 97px;
+}
+
+.sholders:hover {
+  background-image: url("/images/frontAnatomyRed/sholders.svg");
+}
+
+.biceps {
+  top: 96px;
+  left: 128px;
+  z-index: 80;
+  background-image: url("/images/frontAnatomy/biceps.svg");
+  height: 34px;
+  width: 110px;
+}
+
+.biceps:hover {
+  background-image: url("/images/frontAnatomyRed/biceps.svg");
+}
+
+.forearms {
+  top: 71px;
+  left: 114px;
+  background-image: url("/images/frontAnatomy/forearms.svg");
+  height: 45px;
+  width: 135px;
+}
+
+.forearms:hover {
+  background-image: url("/images/frontAnatomyRed/forearms.svg");
+}
+
+.chest {
+  top: 23px;
+  left: 148.5px;
+  z-index: 100;
+  background-image: url("/images/frontAnatomy/chest.svg");
+  height: 29px;
+  width: 67px;
+}
+
+.chest:hover {
+  background-image: url("/images/frontAnatomyRed/chest.svg");
+}
+
+.sideabs {
+  top: 1.5px;
+  left: 150px;
+  z-index: 90;
+  background-image: url("/images/frontAnatomy/sideabs.svg");
+  height: 75px;
+  width: 65px;
+}
+
+.sideabs:hover {
+  background-image: url("/images/frontAnatomyRed/sideabs.svg");
+}
+
+.abs {
+  top: -78px;
+  left: 167px;
+  z-index: 91;
+  background-image: url("/images/frontAnatomy/abs.svg");
+  height: 65px;
+  width: 32px;
+}
+
+.abs:hover {
+  background-image: url("/images/frontAnatomyRed/abs.svg");
+}
+
+.legs {
+  top: -53px;
+  left: 148px;
+  background-image: url("/images/frontAnatomy/legs.svg");
+  height: 88px;
+  width: 70px;
+}
+
+.legs:hover {
+  background-image: url("/images/frontAnatomyRed/legs.svg");
+}
+
+.claves {
+  top: -18px;
+  left: 151.4px;
+  background-image: url("/images/frontAnatomy/claves.svg");
+  height: 62px;
+  width: 62px;
+}
+
+.claves:hover {
+  background-image: url("/images/frontAnatomyRed/claves.svg");
+}
+
+.back-anatomy {
+  height: 490px;
+  width: 370px;
+  border: 3px white solid;
+  background-image: url(/images/backAnatomy/backanatomy.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.back-anatomy .sholders {
+  background-image: url(/images/backAnatomy/sholders.svg);
+  height: 25px;
+  width: 100px;
+  top: 99px;
+  left: 133px;
+}
+
+.back-anatomy .sholders:hover {
+  background-image: url(/images/backAnatomyRed/sholders.svg);
+}
+
+.triceps {
+  background-image: url(/images/backAnatomy/triceps.svg);
+  width: 121px;
+  height: 31px;
+  top: 108px;
+  left: 123px;
+}
+
+.triceps:hover {
+  background-image: url(/images/backAnatomyRed/triceps.svg);
+}
+
+.back-anatomy .forearms {
+  background-image: url(/images/backAnatomy/forearms.svg);
+  width: 165px;
+  height: 46px;
+  top: 120px;
+  left: 96px;
+}
+
+.back-anatomy .forearms:hover {
+  background-image: url(/images/backAnatomyRed/forearms.svg);
+}
+
+.back-anatomy .traps {
+  background-image: url(/images/backAnatomy/traps.svg);
+  width: 62px;
+  height: 77px;
+  top: -40px;
+  left: 150px;
+}
+
+.back-anatomy .traps:hover {
+  background-image: url(/images/backAnatomyRed/traps.svg);
+}
+
+.back {
+  background-image: url(/images/backAnatomy/back.svg);
+  width: 65px;
+  height: 71px;
+  top: -35px;
+  left: 149px;
+}
+
+.back:hover {
+  background-image: url(/images/backAnatomyRed/back.svg);
+}
+
+.glutes {
+  background-image: url(/images/backAnatomy/glutes.svg);
+  width: 59px;
+  height: 43px;
+  top: -36px;
+  left: 153px;
+}
+
+.glutes:hover {
+  background-image: url(/images/backAnatomyRed/glutes.svg);
+}
+
+.back-anatomy .legs {
+  background-image: url(/images/backAnatomy/legs.svg);
+  width: 67px;
+  height: 76px;
+  top: -25px;
+  left: 148px;
+}
+
+.back-anatomy .legs:hover {
+  background-image: url(/images/backAnatomyRed/legs.svg);
+}
+
+.back-anatomy .claves {
+  background-image: url(/images/backAnatomy/claves.svg);
+  width: 65px;
+  height: 46px;
+  top: -14px;
+  left: 149px;
+}
+
+.back-anatomy .claves:hover {
+  background-image: url(/images/backAnatomyRed/claves.svg);
+}
+
+/* muscle description*********on the right side of anatomy */
+
+.muscle-description {
+  display: none;
+  justify-content: space-between;
+  height: fit-content;
+  margin: 30px;
+  background: rgb(54, 54, 54);
+}
+
+.muscle-name-and-description {
+  padding: 2%;
+}
+
+.muscle-name-and-description h1 {
+  font-size: 5rem;
+  padding-bottom: 2%;
+}
+
+.muscle-image {
+  box-sizing: content-box;
+  box-shadow: rgba(0, 0, 0, 0.6) -5px 10px 10px 5px;
+}
+
+.muscle-paragraph {
+  width: 100;
+  line-height: 1.5;
+}
+
+.muscle-paragraph h3 {
+  font-size: 2rem;
+}
+
+.workout-details {
+  height: fit-content;
+  width: 100%;
+}
+
+.muscle-name {
+  border: 2px white solid;
+  height: 10%;
+}
+
+.workout-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.workout {
+  width: 48%;
+  height: 25%;
+  display: flex;
+  margin: 1%;
+}
+
+.workout-description {
+  width: 70.3%;
+  background: rgb(54, 54, 54) 93%;
+  padding: 3%;
+}
+
+.gif img {
+  width: 100%;
+}
+
+.gif {
+  height: 100%;
+  width: 29.7%;
+  box-sizing: content-box;
+  border: 10px solid black;
+  box-shadow: rgba(0, 0, 0, 0.6) -5px 10px 10px 5px;
+}
+
+@media (max-width: 1000px) {
+  .muscle-image {
+    display: none;
+  }
+
+  .anatomy {
+    transform: scale(0.7);
+  }
+}

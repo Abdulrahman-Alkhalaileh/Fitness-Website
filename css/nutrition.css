@@ -1,0 +1,72 @@
+.container {
+  background: linear-gradient(rgba(97, 97, 97, 0.7), rgba(90, 90, 90, 0.7)),
+    url(../images/nutrition/nutrition.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+.calculator {
+  background-color: rgb(17, 17, 17);
+  font-size: 2rem;
+  width: 590px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px 0px;
+  margin: 10px 0;
+}
+
+.calculator label {
+  width: 100px;
+  color: rgb(148, 148, 148);
+}
+
+.calculator input,
+select {
+  font-size: 2rem;
+  margin-right: 15px;
+  padding-left: 20px;
+  background-color: rgb(136, 136, 136);
+  border-radius: 3px;
+  color: white;
+}
+
+.input {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.calculator form {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin: 30px 0;
+  width: 100%;
+}
+
+td {
+  padding: 20px;
+  background-color: rgba(95, 95, 95, 0.5);
+  border-radius: 10px;
+}
+
+table p {
+  font-size: 1.6rem;
+  color: rgb(177, 177, 177);
+}
+
+span {
+  color: rgb(0, 89, 255);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1033px) {
+  .calculator {
+    transform: scale(0.7);
+  }
+}
